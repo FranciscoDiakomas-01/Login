@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="bola"></div>
+    <div class="bol1a"></div>
     <form method="post">
-        <h1>Login</h1>
-        <input type="email"  id="email" placeholder="Email" autocomplete="off" autofocus>
-        <span id="emailValidator"></span>
-        <input type="password" placeholder="Senha" autocomplete="off">
-        <span id="passwordValidator"></span>
+        <h1>Entrar</h1>
+        <label for="eamail">Email</label>
+        <input type="email" name="email" id="email" placeholder="Entre com Seu Email">
+        <p id="emailValidator"></p>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Entre com sua Senha">
+        <p id="passwordvalidator"></p>
+        <button id="logar">Entrar</button>
+        <button id="criar">Criar</button>
         <div>
-            <button>Entrar</button>
-            <button>Criar Conta</button>
+            <button>Google</button>
+            <button>Facebook</button>
         </div>
-        <div>
-            <hr>
-            <span>ou</span>
-            <hr>
-        </div>
-        <button>Logar Com Faebook</button>
     </form>
 </body>
 </html>
