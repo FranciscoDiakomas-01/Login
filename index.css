@@ -12,9 +12,10 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.932);
+    overflow: hidden;
 
 }
-form{
+section{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -26,8 +27,8 @@ form{
     width:400px;
     -webkit-backdrop-filter: blur(3px);
     border-radius: 10px;
+    
 }
-
 .bola{
     height: 150px;
     width: 150px;
@@ -59,6 +60,7 @@ input{
     margin: 5px 0px;
     border-radius: 5px;
 }
+
 input::placeholder{
     color: white;
 }
@@ -70,19 +72,22 @@ button{
     margin-bottom: 10px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform .5s ease;
+    transition: all .5s ease;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.555);
 }
 button:active{
     transform: translateY(4px);
 }
-form div{
+section div{
     width: 100%;
     display: flex;
     gap: 30px;
 
     
 }
-form div button{
+section div button{
     width: 100%;
     display: flex;
     background-color: rgba(255,255,255,0.2);
@@ -93,4 +98,37 @@ form div button{
     text-align: center;
     justify-content: center;
     
+}
+div button:hover{
+    background-color: rgba(255,255,255,0.5); ;
+}
+p{
+    color: rgb(246, 55, 55);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+    padding: 1px 5px ;
+    font-size: 11pt;
+}
+.spinner{
+    height: 60px;
+    width: 60px;
+    display: none;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 45%;
+    margin-top: 10px;
+    border: dotted orangered 7px;
+    border-bottom: 13px solid transparent;
+    transition: transform .5s ease;
+    animation: girar infinite .5s linear ;
+}
+
+@keyframes girar {
+    from{
+        transform: translate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
